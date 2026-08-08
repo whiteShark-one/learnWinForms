@@ -36,6 +36,10 @@
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
+            label1 = new Label();
+            lstNames = new ListBox();
+            textName = new TextBox();
+            btnAdd = new Button();
             SuspendLayout();
             // 
             // button1
@@ -123,11 +127,50 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(516, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 20);
+            label1.TabIndex = 10;
+            label1.Text = "Names";
+            // 
+            // lstNames
+            // 
+            lstNames.FormattingEnabled = true;
+            lstNames.Location = new Point(516, 49);
+            lstNames.Name = "lstNames";
+            lstNames.Size = new Size(150, 104);
+            lstNames.TabIndex = 11;
+            // 
+            // textName
+            // 
+            textName.Location = new Point(672, 49);
+            textName.Name = "textName";
+            textName.Size = new Size(125, 27);
+            textName.TabIndex = 12;
+            textName.Text = "txtName";
+            // 
+            // btnAdd
+            // 
+            btnAdd.Location = new Point(672, 82);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(125, 29);
+            btnAdd.TabIndex = 13;
+            btnAdd.Text = "Add Name";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(821, 437);
+            Controls.Add(btnAdd);
+            Controls.Add(textName);
+            Controls.Add(lstNames);
+            Controls.Add(label1);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -152,5 +195,9 @@
         private Button button5;
         private Button button6;
         private Button button7;
+        private Label label1;
+        private ListBox lstNames;
+        private TextBox textName;
+        private Button btnAdd;
     }
 }

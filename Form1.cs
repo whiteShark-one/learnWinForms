@@ -242,16 +242,27 @@ namespace learnWinForms
         private async void button7_Click(object sender, EventArgs e)
         {
             var sw = Stopwatch.StartNew();
-            await Task.Run(() => Parallel.For(0,1000,i => cpuBoundMethod()));
+            await Task.Run(() => Parallel.For(0, 1000, i => cpuBoundMethod()));
             sw.Stop();
             MessageBox.Show($"cpu6计算： {sw.ElapsedMilliseconds}");
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textName.Text) && !lstNames.Items.Contains(textName.Text))
+            {
+                lstNames.Items.Add(textName.Text);
+            }
+        }
+
+
+
         /*
-            总结
-                #1 Task.Run：把整个 Parallel.For 丢进线程池，保护 UI 不卡死，仅此而已。
-                #2 Parallel.For：CPU 密集并行工具，内部会使用多个线程池线程拆分循环，并且是阻塞调用。
-                #3 IO 场景不要用 Parallel；IO 用 async/WhenAll
-         */
+           总结
+               #1 Task.Run：把整个 Parallel.For 丢进线程池，保护 UI 不卡死，仅此而已。
+               #2 Parallel.For：CPU 密集并行工具，内部会使用多个线程池线程拆分循环，并且是阻塞调用。
+               #3 IO 场景不要用 Parallel；IO 用 async/WhenAll
+        */
 
 
     }
