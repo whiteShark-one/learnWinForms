@@ -28,158 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            textBox1 = new TextBox();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            label1 = new Label();
-            lstNames = new ListBox();
-            textName = new TextBox();
-            btnAdd = new Button();
+            loginTitle = new Label();
+            userNameMsg = new Label();
+            textUsername = new TextBox();
+            passwordMsg = new Label();
+            textPassword = new TextBox();
+            loginBtn = new Button();
+            lblMsg = new Label();
             SuspendLayout();
             // 
-            // button1
+            // loginTitle
             // 
-            button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(10, 332);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(92, 28);
-            button1.TabIndex = 2;
-            button1.Text = "健壮异步";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            loginTitle.AutoSize = true;
+            loginTitle.Font = new Font("黑体", 18F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            loginTitle.Location = new Point(341, 73);
+            loginTitle.Name = "loginTitle";
+            loginTitle.Size = new Size(73, 30);
+            loginTitle.TabIndex = 0;
+            loginTitle.Text = "登录";
             // 
-            // button2
+            // userNameMsg
             // 
-            button2.Location = new Point(10, 364);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(92, 28);
-            button2.TabIndex = 3;
-            button2.Text = "IObutton2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            userNameMsg.AutoSize = true;
+            userNameMsg.Font = new Font("华文行楷", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            userNameMsg.ForeColor = SystemColors.InfoText;
+            userNameMsg.Location = new Point(171, 135);
+            userNameMsg.Name = "userNameMsg";
+            userNameMsg.Size = new Size(94, 29);
+            userNameMsg.TabIndex = 1;
+            userNameMsg.Text = "账号：";
             // 
-            // button3
+            // textUsername
             // 
-            button3.Location = new Point(106, 364);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(92, 28);
-            button3.TabIndex = 4;
-            button3.Text = "IObutton3";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            textUsername.Location = new Point(244, 137);
+            textUsername.Name = "textUsername";
+            textUsername.Size = new Size(293, 27);
+            textUsername.TabIndex = 2;
             // 
-            // button4
+            // passwordMsg
             // 
-            button4.Location = new Point(202, 364);
-            button4.Margin = new Padding(2);
-            button4.Name = "button4";
-            button4.Size = new Size(92, 28);
-            button4.TabIndex = 5;
-            button4.Text = "IObutton4";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            passwordMsg.AutoSize = true;
+            passwordMsg.Font = new Font("华文行楷", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            passwordMsg.ForeColor = SystemColors.InfoText;
+            passwordMsg.Location = new Point(171, 184);
+            passwordMsg.Name = "passwordMsg";
+            passwordMsg.Size = new Size(94, 29);
+            passwordMsg.TabIndex = 3;
+            passwordMsg.Text = "密码：";
             // 
-            // textBox1
+            // textPassword
             // 
-            textBox1.Location = new Point(10, 23);
-            textBox1.Margin = new Padding(2);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(485, 277);
-            textBox1.TabIndex = 6;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textPassword.Location = new Point(244, 184);
+            textPassword.Name = "textPassword";
+            textPassword.PasswordChar = '*';
+            textPassword.Size = new Size(293, 27);
+            textPassword.TabIndex = 4;
             // 
-            // button5
+            // loginBtn
             // 
-            button5.Location = new Point(10, 396);
-            button5.Name = "button5";
-            button5.Size = new Size(111, 29);
-            button5.TabIndex = 7;
-            button5.Text = "CPUbutton5";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            loginBtn.Location = new Point(341, 271);
+            loginBtn.Name = "loginBtn";
+            loginBtn.Size = new Size(94, 29);
+            loginBtn.TabIndex = 5;
+            loginBtn.Text = "登录";
+            loginBtn.UseVisualStyleBackColor = true;
+            loginBtn.Click += loginBtn_Click;
             // 
-            // button6
+            // lblMsg
             // 
-            button6.Location = new Point(127, 397);
-            button6.Name = "button6";
-            button6.Size = new Size(111, 29);
-            button6.TabIndex = 8;
-            button6.Text = "CPUbutton6";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
-            // 
-            // button7
-            // 
-            button7.Location = new Point(244, 397);
-            button7.Name = "button7";
-            button7.Size = new Size(116, 29);
-            button7.TabIndex = 9;
-            button7.Text = "CPUbutton7";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(516, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 20);
-            label1.TabIndex = 10;
-            label1.Text = "Names";
-            // 
-            // lstNames
-            // 
-            lstNames.FormattingEnabled = true;
-            lstNames.Location = new Point(516, 49);
-            lstNames.Name = "lstNames";
-            lstNames.Size = new Size(150, 104);
-            lstNames.TabIndex = 11;
-            // 
-            // textName
-            // 
-            textName.Location = new Point(672, 49);
-            textName.Name = "textName";
-            textName.Size = new Size(125, 27);
-            textName.TabIndex = 12;
-            textName.Text = "txtName";
-            // 
-            // btnAdd
-            // 
-            btnAdd.Location = new Point(672, 82);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(125, 29);
-            btnAdd.TabIndex = 13;
-            btnAdd.Text = "Add Name";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
+            lblMsg.AutoSize = true;
+            lblMsg.ForeColor = Color.Red;
+            lblMsg.Location = new Point(341, 231);
+            lblMsg.Name = "lblMsg";
+            lblMsg.Size = new Size(0, 20);
+            lblMsg.TabIndex = 6;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(821, 437);
-            Controls.Add(btnAdd);
-            Controls.Add(textName);
-            Controls.Add(lstNames);
-            Controls.Add(label1);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(textBox1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Margin = new Padding(2);
+            ClientSize = new Size(800, 450);
+            Controls.Add(lblMsg);
+            Controls.Add(loginBtn);
+            Controls.Add(textPassword);
+            Controls.Add(passwordMsg);
+            Controls.Add(textUsername);
+            Controls.Add(userNameMsg);
+            Controls.Add(loginTitle);
+            ForeColor = SystemColors.MenuHighlight;
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -187,17 +123,13 @@
         }
 
         #endregion
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private TextBox textBox1;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Label label1;
-        private ListBox lstNames;
-        private TextBox textName;
-        private Button btnAdd;
+
+        private Label loginTitle;
+        private Label userNameMsg;
+        private TextBox textUsername;
+        private Label passwordMsg;
+        private TextBox textPassword;
+        private Button loginBtn;
+        private Label lblMsg;
     }
 }
